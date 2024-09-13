@@ -12,6 +12,7 @@ local servers = {
     'pyright',
     --'r_language_server',
     'sqlls',
+    'ts_ls'
     'textlsp',
 }
 
