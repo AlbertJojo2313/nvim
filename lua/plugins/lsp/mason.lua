@@ -1,14 +1,11 @@
 -- lua/plugins/lsp/mason.lua
 return {
-    -- Mason.nvim plugin
     {
         'williamboman/mason.nvim',
         config = function()
             require('mason').setup()
         end
     },
-    
-    -- Mason-LSPConfig plugin
     {
         'williamboman/mason-lspconfig.nvim',
         config = function()
@@ -19,23 +16,18 @@ return {
                     "clangd",
                     "ast_grep",
                     "sqlls",
-                    -- Uncomment and add more servers if needed
-                    -- "java_language_server",
-                    -- "r_language_server",
                     "textlsp",
-                    "ts_ls",  -- Make sure this is the correct name
+                    "ts_ls",
                     "ltex",
                 },
             })
         end,
         dependencies = { 'williamboman/mason.nvim' },
     },
-    
-    -- nvim-lspconfig plugin
     {
         'neovim/nvim-lspconfig',
         config = function()
-            -- lspconfig setup will be handled by lazy.nvim based on the lazy setup
+            require('plugins.lsp.setup')  -- Ensure this path is correct
         end,
         dependencies = { 'williamboman/mason-lspconfig.nvim' },
     },
