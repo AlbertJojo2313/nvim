@@ -1,5 +1,5 @@
 
-local lspconfig = require('lspconfig')
+local lspconfig = require('nvim-lspconfig')
 local M = {}
 
 function M.setup()
