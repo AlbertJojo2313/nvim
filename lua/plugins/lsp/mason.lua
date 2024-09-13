@@ -15,13 +15,12 @@ return {
                     "clangd",
                     "ast_grep",
                     "sqlls",
-                    --"java_language_server",
-                    --"r_language_server",
+                    -- "java_language_server",
+                    -- "r_language_server",
                     "textlsp",
-                    "ts_ls",
+                    "tsserver",  -- Updated here
                     "ltex",
                 },
-                            
             })
         end,
         dependencies = { 'williamboman/mason.nvim' },
