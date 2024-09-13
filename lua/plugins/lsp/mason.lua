@@ -23,7 +23,7 @@ return {
                     -- "java_language_server",
                     -- "r_language_server",
                     "textlsp",
-                    "tsserver",  -- Make sure this is the correct name
+                    "ts_ls",  -- Make sure this is the correct name
                     "ltex",
                 },
             })
