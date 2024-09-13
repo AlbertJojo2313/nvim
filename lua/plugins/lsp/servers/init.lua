@@ -6,13 +6,11 @@ local M = {}
 local servers = {
     'ast_grep',
     'clangd',
-    --'java_language_server',
     'ltex',
     'lua_ls',
     'pyright',
-    --'r_language_server',
     'sqlls',
-    'ts_ls'
+    'ts_ls',
     'textlsp',
 }
 
@@ -26,4 +24,3 @@ for _, server in ipairs(servers) do
 end
 
 return M
-
