@@ -1,7 +1,7 @@
 --Plugins manager
+-- Plugins manager
 return {
     require("plugins.catppuccin"),
-
     require("plugins.telescope"),
     require("plugins.tree-sitter"),
     require("plugins.neo-tree"),
@@ -9,5 +9,5 @@ return {
 
     -- LSP
     require("plugins.lsp.mason"),
-    --require("plugins.lsp")
+    require("plugins.lsp.init")  -- Corrected here
 }
