@@ -1,5 +1,5 @@
 -- lua/plugins/lsp/setup.lua
-local lspconfig = require('lspconfig')
+local lspconfig = require('nvim-lspconfig')
 local mason_lspconfig = require('mason-lspconfig')
 
 local function setup_server(server_name)
