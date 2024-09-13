@@ -3,9 +3,10 @@ local lspconfig = require('lspconfig')
 local mason_lspconfig = require('mason-lspconfig')
 
 local function setup_server(server_name)
+    -- Try to load server configuration dynamically
     local success, server_config = pcall(require, 'plugins.lsp.servers.' .. server_name)
-    if success and type(server_config) == "table" and type(server_config.setup) == "function" then
-        server_config.setup({})
+    if success and type(server_config.setup) == "function" then
+        server_config.setup()  -- Call the setup function without passing an empty table
     else
         print('No configuration found for ' .. server_name)
     end
