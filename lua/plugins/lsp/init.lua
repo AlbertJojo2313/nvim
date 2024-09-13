@@ -1,6 +1,7 @@
---Initalize LSP Servers
+-- Initialize LSP Servers
 return {
-    --require('plugins.lsp.mason'),
+    require('plugins.lsp.mason'),
     require('plugins.lsp.setup'),
-    --require('plugins.lsp.keymaps')
+    -- Optionally uncomment this if you want to include keymaps
+    -- require('plugins.lsp.keymaps')
 }
