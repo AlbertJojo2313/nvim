@@ -14,7 +14,7 @@ end
 -- Setup Mason-LSPConfig handlers
 mason_lspconfig.setup_handlers({
     function(server_name)
+        -- Adjust the server name if necessary, e.g., replace "tsserver" with "ts_ls" if that’s how your server is named
         setup_server(server_name)
     end,
 })
-
