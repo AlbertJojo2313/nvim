@@ -8,5 +8,5 @@ return {
     require("plugins.lualine"),
 
     -- LSP
-    require('plugins.lsp')-- Corrected here
+    require('plugins.lsp.init')-- Corrected here
 }
