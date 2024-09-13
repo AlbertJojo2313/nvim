@@ -8,6 +8,5 @@ return {
     require("plugins.lualine"),
 
     -- LSP
-    require("plugins.lsp.mason"),
-    require("plugins.lsp.init")  -- Corrected here
+    require('plugins.lsp')-- Corrected here
 }
