@@ -9,6 +9,12 @@ local function setup_server(server_name)
         server_config.setup({
             on_attach = function(client, bufnr)
                 -- Add keymaps or other configurations here if needed
+                local keymaps = require('plugins.lsp.keymaps')
+                keymaps.setup_keymaps(bufnr)
+
+                vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+
+                client.resolved_capabilities.document_formatting = true
             end,
             capabilities = vim.lsp.protocol.make_client_capabilities(),
         })

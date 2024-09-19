@@ -5,12 +5,12 @@ return {
         "nvim-lua/plenary.nvim",
         "nvim-tree/nvim-web-devicons", -- Optional, but recommended
         "MunifTanjim/nui.nvim",
-        "3rd/image.nvim", -- Optional image support in preview window
+        "3rd/image.nvim",              -- Optional image support in preview window
     },
     config = function()
         require("neo-tree").setup({
-            sources = {'filesystem', 'buffers', 'git_status'},
-            
+            sources = { 'filesystem', 'buffers', 'git_status' },
+
             filesystem = {
                 follow_current_file = true,
                 use_libuv_file_watcher = true,
@@ -20,7 +20,7 @@ return {
                 window = {
                     width = 30,
                     mappings = {
-                        ["<space>"] = false,
+                        --["<space>"] = false,
                         ["<leader>r"] = "open",
                         ["<tab>"] = "toggle_node",
                         ["<bs>"] = "navigate_up",
@@ -31,7 +31,7 @@ return {
             buffers = {
                 window = {
                     mappings = {
-                        ["<space>"] = false,
+                        --["<space>"] = false,
                         ["<cr>"] = "open",
                         ["<tab>"] = "toggle_node",
                     },
@@ -41,7 +41,7 @@ return {
             git_status = {
                 window = {
                     mappings = {
-                        ["<space>"] = false,
+                        --["<space>"] = false,
                         ["<leader>r"] = "open",
                     },
                 },
@@ -49,12 +49,12 @@ return {
 
             window = {
                 mappings = {
-                    ["P"] = {"toggle_preview", config = {use_float = true, use_image_nvim = true}},
-                    ["<space>"] = false,
+                    ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+                    --["<space>"] = false,
                     ["<leader>r"] = "open",
                     ["<tab>"] = "toggle_mode", -- Used to either expand or collapse directories
-                    ["<bs>"] = "navigate_up", -- Backspace to move up a directory level
-                    ["<c-e>"] = "rename", --- Ctrl+e to rename
+                    ["<bs>"] = "navigate_up",  -- Backspace to move up a directory level
+                    ["<c-e>"] = "rename",      --- Ctrl+e to rename
                     ["<leader>d"] = "delete",
                     ["<c-c>"] = "copy",
                     ["<c-x>"] = "cut",
@@ -73,4 +73,3 @@ return {
         vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>", { noremap = true, silent = true })
     end,
 }
-
